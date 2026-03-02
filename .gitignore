@@ -1,0 +1,10 @@
+.gradle/
+build/
+*.class
+*.iml
+.idea/
+out/
+
+# Local scripts — never upload
+push-to-github.bat
+plugin-hub-submit.bat
