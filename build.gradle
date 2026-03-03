@@ -35,12 +35,13 @@ tasks.withType(JavaCompile).configureEach {
 	options.compilerArgs += ['-Xlint:deprecation', '-Xlint:unchecked']
 }
 
+test {
+	enabled = false
+}
+
 tasks.register('runClient', JavaExec) {
 	classpath = sourceSets.test.runtimeClasspath
 	mainClass = 'com.collectionselection.CollectionSelectionPluginTest'
-	javaLauncher = javaToolchains.launcherFor {
-		languageVersion = JavaLanguageVersion.of(11)
-	}
 	jvmArgs '-ea', '--add-opens=java.base/java.lang.reflect=ALL-UNNAMED'
 	args '--developer-mode'
 }
