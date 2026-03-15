@@ -5,6 +5,11 @@ build/
 .idea/
 out/
 
+# Claude Code — local only
+CLAUDE.md
+
+# Gradle dependency verification — hub overwrites this anyway
+gradle/verification-metadata.xml
+
 # Local scripts — never upload
-push-to-github.bat
-plugin-hub-submit.bat
+*.bat
